@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>粒子玫瑰花束 · Particle Rose</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; min-height: 100%;
+    background: radial-gradient(ellipse at 50% 0%, #1a0714 0%, #05020a 60%);
+    color: #f0dfe6;
+    font: 16px/1.7 "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 90px 24px 80px; }
+  h1 {
+    font-size: 34px; font-weight: 600; margin: 0 0 14px;
+    letter-spacing: .06em;
+    background: linear-gradient(90deg, #ff9ec0, #ff5f8f 45%, #d94a7a);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub { color: #a98a97; margin: 0 0 56px; font-size: 15px; }
+  .cards { display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 660px) { .cards { grid-template-columns: 1fr; } .wrap { padding-top: 56px; } }
+  a.card {
+    display: block; padding: 26px 24px 24px; border-radius: 16px;
+    background: rgba(255, 120, 165, .055);
+    border: 1px solid rgba(255, 130, 175, .22);
+    text-decoration: none; color: inherit;
+    transition: transform .22s ease, border-color .22s ease, background .22s ease;
+  }
+  a.card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 120, 165, .11);
+    border-color: rgba(255, 130, 175, .55);
+  }
+  .tag {
+    display: inline-block; font-size: 11px; letter-spacing: .16em;
+    color: #ff85ad; border: 1px solid rgba(255, 130, 175, .4);
+    border-radius: 20px; padding: 2px 11px; margin-bottom: 14px;
+  }
+  .card h2 { margin: 0 0 10px; font-size: 19px; font-weight: 600; }
+  .card p { margin: 0; font-size: 14px; color: #a98a97; line-height: 1.75; }
+  footer {
+    margin-top: 60px; padding-top: 26px;
+    border-top: 1px solid rgba(255, 130, 175, .13);
+    font-size: 13px; color: #7d6470;
+  }
+  footer a { color: #c76f92; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>粒子玫瑰花束</h1>
+  <p class="sub">
+    纯 Canvas 2D 手写的 3D 软渲染，把一束玫瑰画成几万颗发光粒子。<br>
+    没有任何第三方依赖——不用 Three.js，不用 Python，不用联网。
+  </p>
+
+  <div class="cards">
+    <a class="card" href="rose.html">
+      <span class="tag">静态粒子</span>
+      <h2>玫瑰花束</h2>
+      <p>粒子位置固定，轮廓清晰。每朵玫瑰绕自己的花轴自转，开场是一朵一朵依次绽放。</p>
+    </a>
+    <a class="card" href="heart.html">
+      <span class="tag">漂浮粒子</span>
+      <h2>玫瑰花束 · 漂浮版</h2>
+      <p>每颗粒子被目标位拉住、同时不断被随机轻推，整束花始终轻微浮动，边缘毛茸茸的。</p>
+    </a>
+  </div>
+
+  <footer>
+    按住鼠标拖动可以旋转着看，不操作时会自动缓慢旋转。<br>
+    源码：<a href="https://github.com/hejialun777/particle-rose">github.com/hejialun777/particle-rose</a>
+  </footer>
+</div>
+</body>
+</html>
